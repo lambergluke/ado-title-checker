@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-and-push-inherit:
-    uses: snippets-n-memes/reusable-workflows/blob/main/.github/workflows/docker-build-and-push.yml@main
+    uses: snippets-n-memes/reusable-workflows/.github/workflows/docker-build-and-push.yml@main
     secrets: inherit
   build-and-push-no-inherit:
-    uses: snippets-n-memes/reusable-workflows/blob/main/.github/workflows/docker-build-and-push.yml@main
+    uses: snippets-n-memes/reusable-workflows/.github/workflows/docker-build-and-push.yml@main
