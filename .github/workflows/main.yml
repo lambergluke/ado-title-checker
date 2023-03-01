@@ -1,12 +1,10 @@
 name: Check PR Title
-on:
-  pull_request:
-    types: [opened, edited, synchronize, reopened]
+on: [pull_request_target]
   
 jobs:
   title-check:
     runs-on: ubuntu-latest
     steps:
       - name: print pr title
-        if: ${{ contains(toJSON(github.event.pull_request.title), 'AB#') }}
-        run: echo 'Hello'
+        if: ${{ !contains(toJSON(github.event.pull_request.title), 'AB#') }}
+        run: exit 1
