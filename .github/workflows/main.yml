@@ -6,5 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print pr title
-        if: ${{ contains(toJSON(github.event.pull_request.title), 'AB#') == false }}
-        run: exit 1
+        run:  |
+          echo toJSON(github.event.pull_request.title)
+          echo ${{ contains(toJSON(github.event.pull_request.title), 'AB#')
+          #${{ contains(toJSON(github.event.pull_request.title), 'AB#') == false }}
