@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print pr title
-        run: echo ${{ github.event.pull_request.title }}
+        run: contains(${{ github.event.pull_request.title }}, 'AB#')
+        
+        
