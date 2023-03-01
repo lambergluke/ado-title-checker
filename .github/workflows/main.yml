@@ -1,11 +1,9 @@
 name: Check PR Title
 on: [pull_request_target]
-
+  
 jobs:
   title-check:
     runs-on: ubuntu-latest
     steps:
       - name: print pr title
-        run: contains(${{ github.event.pull_request.title }}, 'AB#')
-        
-        
+        run: contains(''{{ $github.event.pull_request.title }}'', 'AB#')
