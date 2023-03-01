@@ -9,5 +9,5 @@ jobs:
       - name: print pr title
         run:  |
           echo toJSON(github.event.pull_request.title)
-          echo ${{ contains(toJSON(github.event.pull_request.title), 'AB#')
+          echo ${{ contains(toJSON(github.event.pull_request.title), 'AB#') }}
           #${{ contains(toJSON(github.event.pull_request.title), 'AB#') == false }}
